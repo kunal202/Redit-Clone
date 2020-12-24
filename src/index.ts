@@ -33,7 +33,7 @@ const main = async () => {
   const app = express();
   const RedisStore = ConnectRedis(session);
   const redis = new Redis(process.env.REDIS_URL);
-  app.set("proxy", 1);
+  app.set("trust proxy", 1);
   app.use(
     cors({
       origin: process.env.CORS_ORIGIN,
