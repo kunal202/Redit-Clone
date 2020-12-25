@@ -41,6 +41,7 @@ const main = async () => {
     })
   );
 
+  console.log(process.env.CORS_ORIGIN);
   app.use(
     session({
       name: COOKIE_NAME,
@@ -61,7 +62,6 @@ const main = async () => {
     })
   );
 
-  console.log(process.env.SESSION_SECRET);
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [HelloResolver, PostResolver, UserResolver],
@@ -81,7 +81,7 @@ const main = async () => {
     res.send("Homepage");
   });
   app.listen(parseInt(process.env.PORT), () => {
-    console.log("Server Started on" + process.env.PORT);
+    console.log("Server Started on " + process.env.PORT);
   });
 };
 
