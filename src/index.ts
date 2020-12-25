@@ -53,7 +53,7 @@ const main = async () => {
         httpOnly: true,
         secure: prod,
         sameSite: "lax",
-        domain:prod?".vercel.app":undefined
+        domain: prod ? ".vercel.app" : undefined,
       },
       saveUninitialized: false,
       secret: process.env.SESSION_SCERET,
@@ -75,9 +75,9 @@ const main = async () => {
   });
 
   apolloServer.applyMiddleware({ app, cors: false });
-  app.get('/', ()=>{
-    console.log("Homepage");
-  })
+  app.get("/", (_req, res) => {
+    res.send("Homepage");
+  });
   app.listen(parseInt(process.env.PORT), () => {
     console.log("Server Started on localhost:4000");
   });
