@@ -60,6 +60,7 @@ const main = async () => {
       resave: false,
     })
   );
+  console.log(process.env.SESSION_SCERET);
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [HelloResolver, PostResolver, UserResolver],
@@ -79,7 +80,7 @@ const main = async () => {
     res.send("Homepage");
   });
   app.listen(parseInt(process.env.PORT), () => {
-    console.log("Server Started on localhost:4000");
+    console.log("Server Started on" + process.env.PORT);
   });
 };
 
