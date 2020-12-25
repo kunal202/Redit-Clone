@@ -75,6 +75,9 @@ const main = async () => {
   });
 
   apolloServer.applyMiddleware({ app, cors: false });
+  app.get('/', ()=>{
+    console.log("Homepage");
+  })
   app.listen(parseInt(process.env.PORT), () => {
     console.log("Server Started on localhost:4000");
   });
