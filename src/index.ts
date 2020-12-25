@@ -56,11 +56,12 @@ const main = async () => {
         domain: prod ? ".vercel.app" : undefined,
       },
       saveUninitialized: false,
-      secret: process.env.SESSION_SCERET,
+      secret: process.env.SESSION_SECRET,
       resave: false,
     })
   );
-  console.log(process.env.SESSION_SCERET);
+
+  console.log(process.env.SESSION_SECRET);
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [HelloResolver, PostResolver, UserResolver],
