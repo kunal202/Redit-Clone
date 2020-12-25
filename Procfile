@@ -1,2 +1,2 @@
-web: yarn  
-web: yarn dev
+web: tsc
+web: nodemon dist/index.js
