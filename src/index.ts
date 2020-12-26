@@ -41,7 +41,6 @@ const main = async () => {
     })
   );
 
-  console.log(process.env.CORS_ORIGIN);
   app.use(
     session({
       name: COOKIE_NAME,
