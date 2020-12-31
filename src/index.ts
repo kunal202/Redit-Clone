@@ -53,7 +53,7 @@ const main = async () => {
         httpOnly: true,
         secure: prod,
         sameSite: "lax",
-        domain: "https://reddit.kunal202.vercel.app/",
+        // domain: "https://reddit.kunal202.vercel.app/",
       },
       saveUninitialized: false,
       secret: process.env.SESSION_SECRET,
