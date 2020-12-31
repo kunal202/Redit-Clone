@@ -53,7 +53,7 @@ const main = async () => {
         httpOnly: true,
         secure: prod,
         sameSite: "lax",
-        domain: prod ? ".vercel.app" : undefined,
+        domain: prod ? ".kunal202.vercel.app" : undefined,
       },
       saveUninitialized: false,
       secret: process.env.SESSION_SECRET,
