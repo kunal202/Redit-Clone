@@ -71,14 +71,12 @@ export const UpdootSection: React.FC<UpdootSectionProps> = ({ post }) => {
           }
 
           setLoadingState("updoot-loading");
-          console.log(post.id);
           await vote({
             variables: {
               postId: post.id,
               value: 1,
             },
-            update: (cache, { errors }) => {
-              console.log("dssda", errors);
+            update: (cache) => {
               updateAfterVote(1, post.id, cache);
             },
           });
