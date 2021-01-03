@@ -53,7 +53,7 @@ const main = async () => {
         httpOnly: true,
         secure: prod,
         sameSite: "none",
-        domain: ".kunalvunal.ml",
+        domain: "redit-kunal.herokuapp.com",
       },
       saveUninitialized: false,
       secret: process.env.SESSION_SECRET,
