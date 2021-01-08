@@ -8,7 +8,7 @@ import { UserResolver } from "./resolvers/user";
 import Redis from "ioredis";
 import session from "express-session";
 import ConnectRedis from "connect-redis";
-import { COOKIE_NAME, prod } from "./constant";
+import { COOKIE_NAME} from "./constant";
 import cors from "cors";
 import { User } from "./entities/User";
 import { createConnection } from "typeorm";
