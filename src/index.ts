@@ -52,7 +52,7 @@ const main = async () => {
         maxAge: 1000 * 60 * 60 * 24,
         httpOnly: true,
         sameSite: "lax",
-        domain: ".kunalvunal.ml",
+        // domain: ".kunalvunal.ml",
       },
       saveUninitialized: false,
       secret: process.env.SESSION_SECRET,
