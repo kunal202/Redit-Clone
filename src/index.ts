@@ -51,7 +51,6 @@ const main = async () => {
       cookie: {
         maxAge: 1000 * 60 * 60 * 24,
         httpOnly: true,
-        secure: prod,
         sameSite: "lax",
         domain: ".kunalvunal.ml",
       },
