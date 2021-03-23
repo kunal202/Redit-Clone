@@ -26,6 +26,9 @@ const main = async () => {
     synchronize: true,
     migrations: [path.join(__dirname, "./migrations/*")],
     entities: [Post, User, Updoot],
+    ssl: {
+      rejectUnauthorized: false,
+    },
   });
 
   await conn.runMigrations();
